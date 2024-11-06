@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="loginForm">
+        <div class="main">
+            <h1>Login</h1>
+            <div class="box1">
+                User ID: 
+                <input type="text" id="userId" name="userId" required placeholder="User ID" minlength="3">
+            </div>
+                        <div class="box2">
+        Password: 
+          <input type="password" id="password" name="password" required placeholder="Password" minlength="6">
+            </div>
+            <div class="box2">  
+          <button type="submit">Login</button> 
+        <button type="reset">Reset</button> 
+            </div>
+
+        </div> 
+    </form>    
+    <script>
+
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();  
+    const userId = document.getElementById('userId').value;
+    const password = document.getElementById('password').value;
+    if (userId && password.length >= 6) { 
+        window.location.href = 'currency.html';  
+    } else {
+        alert('Please enter a valid User ID and Password.');
+    }
+});
+
+    </script>
+</body>
+</html>
